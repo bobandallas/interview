@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 @ControllerAdvice
 public class CustomGlobalExceptionHandler {
 
-
+    // handle exception and class description to developer
     @ExceptionHandler(Exception.class)
     public final ResponseEntity<String> manageException(Exception ex) {
         StackTraceElement[] ste = ex.getStackTrace();
@@ -19,6 +19,7 @@ public class CustomGlobalExceptionHandler {
         return new ResponseEntity<>("Exception occur: " + className , HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
+    // handle data access exception
     @ExceptionHandler(DataAccessException.class)
     public ResponseEntity<String> handleDataAccessException(DataAccessException ex) {
         return new ResponseEntity<>("DataAccessException Occur", HttpStatus.INTERNAL_SERVER_ERROR);
