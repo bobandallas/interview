@@ -1,5 +1,5 @@
 ## Reward Build with JPA
-
+#### run src/main/java/org/example/RewardApplication.java to start application
 ### Get All
 #### Request Url : /reward
 #### Request method : GET
