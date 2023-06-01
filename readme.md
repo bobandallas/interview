@@ -1,6 +1,7 @@
 ## Reward Build with JPA
 #### run src/main/java/org/example/RewardApplication.java to start application
 ### Get All
+#### If there is no record, the first time request will init and return null, second time request work well
 #### Request Url : /reward
 #### Request method : GET
 #### Request Body : null
